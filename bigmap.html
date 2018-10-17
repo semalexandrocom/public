@@ -1,0 +1,229 @@
+<style>
+.ymaps-image-with-content-content
+{
+    z-index: -1;
+}
+
+.ymaps-image-with-content-content ymaps ymaps
+{
+background:#ffffff;
+padding: 3px 3px 3px 8px;
+border:1px solid #00692f;
+border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+	white-space: nowrap;
+}
+
+ymaps-point-overlay:nth-child(1)
+{
+z-index:99999;
+}
+</style>
+
+<script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+<div id="YMapsID2" style="width:1000px; height:500px; margin: 0 auto;display: inline-block;"></div>
+
+<script>
+  ymaps.ready(function(){
+  	var myMap 	= 	new ymaps.Map('YMapsID2', {
+		center	: [67.094407, 76.775022],
+		zoom	: 6
+	});
+    myMap.controls // добавим всяких кнопок, в скобках их позиции в блоке
+    .add('zoomControl', { left: 5, top: 5 }) //Масштаб
+    .add('typeSelector') //Список типов карты
+    .add('mapTools', { left: 35, top: 5 }); // Стандартный набор кнопок
+  
+    // Создание метки 
+
+	    var myPlacemarkoffice = new ymaps.Placemark(
+		[66.09441175757337, 76.77503188619859],
+         {hintContent: 'Офис Новый Уренгой:<br/>Россия, ЯНАО, Новый Уренгой, Промысловая улица, 21 А</br>тел. 8-800-222-81-22 номер по России'/*,
+		 iconContent: 'Офис'*/
+        }, {
+
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '/i/office_icon.png',
+            iconImageSize: [30, 49],
+            iconImageOffset: [-10, -49]/*,
+            iconContentOffset: [25, 8]*/
+        });
+	
+	    var myPlacemark1 = new ymaps.Placemark(
+		[66.077800, 76.595556],
+         {
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '/i/btzp_icon.png',
+            iconImageSize: [30, 49],
+            iconImageOffset: [-10, -49]
+        });
+		
+    	   var myPlacemark2 = new ymaps.Placemark(
+		[66.078772, 76.720531],
+         {
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '/i/btzp_icon.png',
+            iconImageSize: [30, 49],
+            iconImageOffset: [-10, -49]
+        });
+		
+		 var myPlacemark3 = new ymaps.Placemark(
+		[66.064911, 76.896511],
+         {
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '/i/btzp_icon.png',
+            iconImageSize: [30, 49],
+            iconImageOffset: [-10, -49]
+        });
+		
+		 var myPlacemark4 = new ymaps.Placemark(
+		[66.029533, 77.088122],
+         {
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '/i/btzp_icon.png',
+            iconImageSize: [30, 49],
+            iconImageOffset: [-10, -49]
+        });
+		
+		var myPlacemark5 = new ymaps.Placemark(
+		[66.208003, 77.218753],
+         {
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '/i/btzp_icon.png',
+            iconImageSize: [30, 49],
+            iconImageOffset: [-10, -49]
+        });
+		
+		var myPlacemark6 = new ymaps.Placemark(
+		[66.369661, 76.975981],
+         {
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '/i/btzp_icon.png',
+            iconImageSize: [30, 49],
+            iconImageOffset: [-10, -49]
+        });
+
+		var myPlacemark7 = new ymaps.Placemark(
+		[67.946061, 75.349256],
+         {
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '/i/btzp_icon.png',
+            iconImageSize: [30, 49],
+            iconImageOffset: [-10, -49]
+        });
+		
+		var myPlacemark8 = new ymaps.Placemark(
+		[65.906214, 78.157500],
+         {
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '/i/btzp_icon.png',
+            iconImageSize: [30, 49],
+            iconImageOffset: [-10, -49]
+        });
+		
+		var myPlacemark9 = new ymaps.Placemark(
+		[65.965669, 78.435206],
+         {
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '/i/btzp_icon.png',
+            iconImageSize: [30, 49],
+            iconImageOffset: [-10, -49]
+        });	
+		
+		var myPlacemark10 = new ymaps.Placemark(
+		[65.857206, 78.852108],
+         {
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '/i/btzp_icon.png',
+            iconImageSize: [30, 49],
+            iconImageOffset: [-10, -49]
+        });	
+		
+		var myPlacemark11 = new ymaps.Placemark(
+		[66.280661, 78.740350],
+         {
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '/i/btzp_icon.png',
+            iconImageSize: [30, 49],
+            iconImageOffset: [-10, -49]
+        });	
+		
+		var myPlacemark12 = new ymaps.Placemark(
+		[66.748639, 79.545347],
+         {
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '/i/btzp_icon.png',
+            iconImageSize: [30, 49],
+            iconImageOffset: [-10, -49]
+        });	
+		
+		var myPlacemark13 = new ymaps.Placemark(
+		[66.876511, 79.689428],
+         {
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '/i/btzp_icon.png',
+            iconImageSize: [30, 49],
+            iconImageOffset: [-10, -49]
+        });	
+		
+		var myPlacemark14 = new ymaps.Placemark(
+		[65.539133, 72.526197],
+         {
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '/i/btzp_icon.png',
+            iconImageSize: [30, 49],
+            iconImageOffset: [-10, -49]
+        });	
+		
+		var myPlacemark15 = new ymaps.Placemark(
+		[65.483067, 72.685950],
+         {
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '/i/btzp_icon.png',
+            iconImageSize: [30, 49],
+            iconImageOffset: [-10, -49]
+        });			
+	 myMap.geoObjects.add(myPlacemark1).add(myPlacemark2).add(myPlacemark3).add(myPlacemark4).add(myPlacemark5).add(myPlacemark6).add(myPlacemark7)
+	 .add(myPlacemark8).add(myPlacemark9).add(myPlacemark10).add(myPlacemark11).add(myPlacemark12).add(myPlacemark13).add(myPlacemark14)
+	 .add(myPlacemark15).add(myPlacemarkoffice);
+    /*
+            // Создаем ломаную.
+    var myPolyline = new ymaps.Polyline([
+        // Указываем координаты вершин.
+        [66.094200, 76.773250],
+        [66.095114, 76.771834],
+        [66.095393, 76.770246],
+        [66.095881, 76.771077],
+        [66.096230, 76.769679]
+  
+    ], {}, {
+        // Задаем опции геообъекта.
+        // Цвет с прозрачностью.
+        strokeColor: "#2B9905",
+         hintContent: "Путь",
+        // Ширину линии.
+        strokeWidth: 3
+
+    });
+
+    // Добавляем линию на карту.
+    myMap.geoObjects.add(myPolyline);
+    */
+    
+  });
+</script>
